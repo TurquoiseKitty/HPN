@@ -1,0 +1,18 @@
+digraph {
+	plan1 [label="Plan 1
+ cooked(a)
+cooked(b)
+" color=Blue shape=box]
+	action1 [label="A0:Cook(a)" color=Red shape=box]
+	plan1 -> action1
+	action2 [label="A0:Cook(b)" color=Red shape=box]
+	plan1 -> action2
+	plan2 [label="Plan 2
+ cooked(a)
+" color=Blue shape=box]
+	action1 -> plan2
+	action3 [label="A0:Wash(a)" color=Red shape=box]
+	plan2 -> action3
+	action4 [label="A1:Cook(a)" color=Red shape=box]
+	plan2 -> action4
+}

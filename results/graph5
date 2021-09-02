@@ -1,0 +1,49 @@
+digraph {
+	plan1 [label="Plan 1
+ cooked(a)
+cooked(b)
+" color=Blue shape=box]
+	action1 [label="A0:Cook(a)" color=Red shape=box]
+	plan1 -> action1
+	action2 [label="A0:Cook(b)" color=Red shape=box]
+	plan1 -> action2
+	plan2 [label="Plan 2
+ cooked(a)
+" color=Blue shape=box]
+	action1 -> plan2
+	action3 [label="A0:Wash(a)" color=Red shape=box]
+	plan2 -> action3
+	action4 [label="A1:Cook(a)" color=Red shape=box]
+	plan2 -> action4
+	plan3 [label="Plan 3
+ clean(a)
+" color=Blue shape=box]
+	action3 -> plan3
+	action5 [label="A0:PickPlace(b, 0)" color=Green shape=box]
+	plan3 -> action5
+	action6 [label="A0:In(b, 0, [2, 1])" color=Green shape=box]
+	plan3 -> action6
+	action7 [label="A0:Clear_Region([2, 1])" color=Green shape=box]
+	plan3 -> action7
+	action8 [label="A0:PickPlace(a, 1)" color=Green shape=box]
+	plan3 -> action8
+	action9 [label="A1:Wash(a)" color=Green shape=box]
+	plan3 -> action9
+	plan4 [label="Plan 4
+ cooked(a)
+" color=Blue shape=box]
+	action4 -> plan4
+	action10 [label="A0:PickPlace(a, 2)" color=Green shape=box]
+	plan4 -> action10
+	action11 [label="A2:Cook(a)" color=Green shape=box]
+	plan4 -> action11
+	plan5 [label="Plan 5
+ cooked(a)
+cooked(b)
+" color=Blue shape=box]
+	action2 -> plan5
+	action12 [label="A0:Wash(b)" color=Red shape=box]
+	plan5 -> action12
+	action13 [label="A1:Cook(b)" color=Red shape=box]
+	plan5 -> action13
+}
